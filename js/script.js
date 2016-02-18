@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 //function myFunc() {
 //  console.log('Hi');
@@ -11,8 +11,20 @@
 
 
 
-function makeMyOwnInterval() {
+//function makeMyOwnInterval() {
+//    console.log('Hi!');
+//    setTimeout(makeMyOwnInterval, 1000);
+//}
+//makeMyOwnInterval();
+
+
+
+
+
+
+function doMyInterval() {
+    
     console.log('Hi!');
-    setTimeout(makeMyOwnInterval, 1000);
+    setTimeout(arguments.callee, 1000);
 }
-makeMyOwnInterval();
+doMyInterval();
